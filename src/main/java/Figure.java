@@ -1,11 +1,5 @@
-public abstract class Figure {
+public interface Figure {
 
-    Figure(){
-    }
-    public double getSquare() {
-        return 0;
-     }
-    public double getPerimeter() {
-        return 0;
-     }
+     double getArea();
+     double getPerimeter();
 }

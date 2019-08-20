@@ -8,7 +8,7 @@ public class EquilateralTriangle extends Triangle {
         return super.getPerimeter();
     }
 
-    public double getSquare() {
-        return super.getSquare();
+    public double getArea() {
+        return super.getArea();
     }
 }

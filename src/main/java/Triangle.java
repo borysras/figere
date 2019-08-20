@@ -1,4 +1,4 @@
-class Triangle extends Figure {
+class Triangle implements Figure {
 
     private final double sideB;
     private final double angleAB;
@@ -11,15 +11,23 @@ class Triangle extends Figure {
     }
 
 
-    @Override
-    public double getSquare() {
+
+    public double getArea() {
         return this.sideA * this.sideB * Math.sin(this.angleAB * Math.PI / 180) /2;
     }
 
-    @Override
     public double getPerimeter() {
         double sideC = Math.sqrt(Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2) - 2
                 * this.sideA * this.sideB * Math.cos(this.angleAB * Math.PI / 180));
         return this.sideA + this.sideB + sideC;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "sideB=" + sideB +
+                ", angleAB=" + angleAB +
+                ", sideA=" + sideA +
+                '}';
     }
 }
